@@ -1,0 +1,265 @@
+/* ==========================================
+   GLOBAL STYLES
+========================================== */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 14px;
+    font-family: 'Titillium Web', sans-serif;
+    background-color: #000;
+    color: #FEFEFE;
+}
+
+a {
+    color: #FF0042;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+/* ==========================================
+   HEADER & NAVIGATION
+========================================== */
+header {
+    padding: 1rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 1rem;
+}
+
+.brand {
+    font-size: 2.5rem;
+    font-family: aquire;
+    color: #fff;
+}
+
+.bar-icon {
+    font-size: 2.5rem;
+    cursor: pointer;
+    display: none;
+    color: #fff;
+}
+
+.navigation {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    background-color: #52057b;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+}
+
+.navigation a {
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+}
+
+.navigation a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.navigation.show {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #52057b;
+    padding: 1rem;
+    z-index: 999;
+}
+
+.close-icon {
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+/* Responsive Nav */
+@media screen and (max-width: 768px) {
+    .bar-icon {
+        display: block;
+    }
+    .navigation {
+        display: none;
+    }
+    .navigation.show {
+        display: flex;
+    }
+}
+
+/* ==========================================
+   SEARCH BOX
+========================================== */
+.search-box {
+    border: solid 1px #52057b;
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    box-shadow: 1px 2px 3px #52057b;
+    flex-wrap: wrap;
+    max-width: 900px;
+}
+
+.search-box select,
+.search-box input,
+.search-box button {
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.search-box button {
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+}
+
+.search-box button:hover {
+    background-color: #000;
+    color: #fff;
+    box-shadow: 1px 2px 3px #fff;
+}
+
+@media screen and (max-width: 460px) {
+    .search-box input,
+    .search-box select,
+    .search-box button {
+        min-width: 100%;
+    }
+}
+
+/* ==========================================
+   SUBFORUM STYLES
+========================================== */
+.container {
+    margin: 20px;
+    padding: 20px;
+}
+
+.subforum {
+    margin-top: 20px;
+}
+
+.subforum-title {
+    background-color: #292B2E;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 4px;
+}
+
+.subforum-row {
+    display: grid;
+    grid-template-columns: 7% 60% 13% 20%;
+}
+
+.subforum-column {
+    padding: 10px;
+    margin: 4px;
+    border-radius: 5px;
+    background-color: #111314;
+}
+
+.subforum-description * {
+    margin-block: 0;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subforum-icon i {
+    font-size: 45px;
+}
+
+@media screen and (max-width: 460px) {
+    .subforum-row {
+        grid-template-columns: 25% 75%;
+        grid-template-rows: auto auto;
+    }
+    .subforum-devider {
+        display: block;
+        height: 1px;
+        background-image: linear-gradient(to right, rgba(190, 190, 190, 0), rgba(255, 255, 255, 0.75), rgba(190, 190, 190, 0));
+    }
+}
+
+@media screen and (min-width: 460px) and (max-width: 1024px) {
+    .subforum-row {
+        grid-template-columns: 10% 60% 10% 20%;
+    }
+    .subforum-icon i {
+        font-size: 35px;
+    }
+}
+
+/* ==========================================
+   LOGIN FORM STYLES
+========================================== */
+.login-box {
+    background-color: #111314;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 1px 2px 6px #52057b;
+    max-width: 400px;
+    width: 100%;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.login-form input {
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #292B2E;
+    color: #fff;
+}
+
+.login-form input::placeholder {
+    color: #ccc;
+}
+
+.login-form button {
+    padding: 10px;
+    background-color: #52057b;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+    background-color: #FF0042;
+}
+
+.login-box .note {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+
+/* Additional existing styles are assumed to be preserved and appended here */
