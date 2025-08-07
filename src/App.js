@@ -2,7 +2,8 @@ import { Routes, Route } from "react-router-dom";
 import Forum from "./components/forum.js";
 import Posts from "./components/post.js";
 import Detail from "./components/detail.js";
-import Login from "./components/login.js"; // Import the Login component
+import Login from "./components/login.js";
+import Register from "./components/register.js";
 
 function App() {
   return (
@@ -10,7 +11,8 @@ function App() {
       <Route path="/" element={<Forum />} />
       <Route path="/posts" element={<Posts />} />
       <Route path="/detail" element={<Detail />} />
-      <Route path="/login" element={<Login />} /> {/* Add the login route */}
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
     </Routes>
   );
 }
